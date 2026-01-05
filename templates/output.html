@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Result – Can I Bunk PSG</title>
+  <link rel="stylesheet" href="/static/home.css">
+</head>
+<body>
+  <div class="card slide-up">
+    <h2>Your Attendance</h2>
+    <div class="percent">{{ attendance }}%</div>
+    {% if attendance >= 75 %}
+      <p class="status safe">🟢 Safe – You can bunk 😎</p>
+    {% elif attendance >= 65 %}
+      <p class="status warn">🟡 Borderline – Careful bro</p>
+    {% else %}
+      <p class="status danger">🔴 Danger – Attend classes 🥲</p>
+    {% endif %}
+    <button onclick="window.location.href='/'">Recalculate</button>
+  </div>
+</body>
+</html>
